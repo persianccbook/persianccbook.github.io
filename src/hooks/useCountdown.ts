@@ -33,7 +33,7 @@ const useCountdown = ({ endDate }: Props) => {
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
       }
-    }, 1000);
+    }, 1000) as unknown as number;;
   };
 
   useEffect(() => {
