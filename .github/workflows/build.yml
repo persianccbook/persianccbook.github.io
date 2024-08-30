@@ -11,7 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write  # Allows writing to the repository (e.g., pushing to gh-pages branch)
+      pages: write     # Allows publishing pages content
+      id-token: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
