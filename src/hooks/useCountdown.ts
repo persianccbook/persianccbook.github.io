@@ -13,7 +13,7 @@ interface Props {
 
 const useCountdown = ({ endDate }: Props) => {
   const [timeLeft, setTimeLeft] = useState({days:0,hours:0,minutes:0,seconds:0} as Time);
-  let interval = useRef<number | undefined>();
+  const interval = useRef<number | undefined>();
   const startTimer = () => {
     const countdownDate = Date.parse(endDate);
 
