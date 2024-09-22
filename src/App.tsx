@@ -1,12 +1,9 @@
-import {
-  Box,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Divider, Typography, useMediaQuery } from "@mui/material";
 import library from "./assets/library.svg";
 import { theme } from "./theme";
 import Countdown from "./components/Countdown";
 import DonateButton from "./components/DonateButton";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
@@ -43,7 +40,7 @@ function App() {
           zIndex: -1, // Behind the text
         }}
       />
-      <Box 
+      <Box
         sx={{
           position: "relative",
           height: "100vh",
@@ -83,11 +80,11 @@ function App() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          sx={{mb:50,mt:20}}
+          sx={{ mb: 20, mt: 20 }}
         >
           <Typography
             variant="h1"
-            fontWeight='bold'
+            fontWeight="bold"
             fontSize={getFontSize()}
             sx={{ mb: 10, mt: 20, textAlign: "center" }}
           >
@@ -97,20 +94,22 @@ function App() {
             variant="caption"
             fontSize={getFontSize() / 3}
             sx={{
-              mb: isMdUp ? "50" : "20",
+              mb: "20",
               maxWidth: "70%",
               textAlign: "center",
             }}
           >
             به کتابخانه آزاد پارسی خوش آمدید. این کتابخانه مجموعه‌ای از کتاب‌ها
-            را که تحت مجوز کریتیو کامنز است، به شما ارائه خواهد داد. هدف ما دسترسی
-            آسان و آزاد به منابع علمی و فرهنگی برای همگان است. در این صفحه،
-            شما می‌توانید شمارش معکوس را برای شروع دسترسی به کتابخانه آزاد پارسی
-            دنبال کنید.
+            را که تحت مجوز کریتیو کامنز است، به شما ارائه خواهد داد. هدف ما
+            دسترسی آسان و آزاد به منابع علمی و فرهنگی برای همگان است. در این
+            صفحه، شما می‌توانید شمارش معکوس را برای شروع دسترسی به کتابخانه آزاد
+            پارسی دنبال کنید.
           </Typography>
         </Box>
         <Countdown />
-        <DonateButton/>
+        <Divider sx={{ width: 300, borderWidth: 2, margin: '5px auto',bgcolor:'white' }} />
+        <SocialMedia/>
+        <DonateButton />
       </Box>
     </>
   );
