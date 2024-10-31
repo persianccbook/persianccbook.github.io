@@ -1,9 +1,10 @@
-import { Box, Divider, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Divider, Link, Typography, useMediaQuery } from "@mui/material";
 import library from "./assets/library.svg";
 import { theme } from "./theme";
 import Countdown from "./components/Countdown";
 // import DonateButton from "./components/DonateButton";
 import SocialMedia from "./components/SocialMedia";
+import { color } from "framer-motion";
 
 function App() {
   const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
@@ -80,7 +81,7 @@ function App() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          sx={{ mb: 20, mt: 20 }}
+          sx={{ mb: 10, mt: 20 }}
         >
           <Typography
             variant="h1"
@@ -107,8 +108,36 @@ function App() {
           </Typography>
         </Box>
         <Countdown />
-        <Divider sx={{ width: 300, borderWidth: 2, margin: '5px auto',bgcolor:'white' }} />
-        <SocialMedia/>
+        <Divider
+          sx={{
+            width: 300,
+            borderWidth: 2,
+            margin: "5px auto",
+            bgcolor: "white",
+          }}
+        />
+        <SocialMedia />
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ mb: 20, mt: 10 }}
+        >
+          <Typography
+            variant="caption"
+            fontSize={getFontSize() / 4}
+            sx={{
+              mb: "20",
+              maxWidth: "70%",
+              textAlign: "center",
+            }}
+          >
+            نسخه آزمایشی سایت در دسترس قرار گرفت، امکانات و بخش های مختلف سایت
+            به مرور اضافه خواهند شد.
+          </Typography>
+          <Button variant="contained"><Link variant="button" href={'https://beta.persianccbook.org'} sx={{color:'white'}} underline="none">رفتن به نسخه ازمایشی</Link></Button>
+        </Box>
         {/* <DonateButton /> */}
       </Box>
     </>
