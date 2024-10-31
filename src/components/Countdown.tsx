@@ -13,7 +13,7 @@ const Countdown = () => {
   const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const { days, hours, minutes, seconds } = useCountdown({
-    endDate: "November 1 2024 00:00:00",
+    endDate: "November 25 2024 00:00:00",
   });
 
   const getFontSize = () => {

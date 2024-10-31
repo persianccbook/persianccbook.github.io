@@ -2,7 +2,7 @@ import { Box, Divider, Typography, useMediaQuery } from "@mui/material";
 import library from "./assets/library.svg";
 import { theme } from "./theme";
 import Countdown from "./components/Countdown";
-import DonateButton from "./components/DonateButton";
+// import DonateButton from "./components/DonateButton";
 import SocialMedia from "./components/SocialMedia";
 
 function App() {
@@ -109,7 +109,7 @@ function App() {
         <Countdown />
         <Divider sx={{ width: 300, borderWidth: 2, margin: '5px auto',bgcolor:'white' }} />
         <SocialMedia/>
-        <DonateButton />
+        {/* <DonateButton /> */}
       </Box>
     </>
   );
