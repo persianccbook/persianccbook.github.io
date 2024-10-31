@@ -4,7 +4,6 @@ import { theme } from "./theme";
 import Countdown from "./components/Countdown";
 // import DonateButton from "./components/DonateButton";
 import SocialMedia from "./components/SocialMedia";
-import { color } from "framer-motion";
 
 function App() {
   const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
